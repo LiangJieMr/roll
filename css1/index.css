@@ -1,0 +1,615 @@
+@charset "UTF-8";
+html {
+  color: #000;
+  background: #fff;
+  overflow-y: scroll;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+html,
+body {
+  outline: 0;
+  -webkit-text-size-adjust: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: Helvetica,Tahoma,Arial,STXihei,"华文细黑","Microsoft YaHei","微软雅黑",sans-serif;
+  cursor: pointer;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+hr,
+button,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  border: none;
+  outline: none;
+}
+
+input,
+select,
+textarea {
+  font-size: 100%;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+fieldset,
+img {
+  border: 0;
+}
+
+abbr,
+acronym {
+  border: 0;
+  font-variant: normal;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+i,
+em,
+th,
+var {
+  font-style: normal;
+  font-weight: 500;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+caption,
+th {
+  text-align: left;
+}
+
+q:before,
+q:after {
+  content: '';
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -.5em;
+}
+
+sub {
+  bottom: -.25em;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ins,
+a {
+  text-decoration: none;
+}
+
+.clearfix:after {
+  display: block;
+  content: '';
+  clear: both;
+}
+
+/* 弹窗公共动画--开始*/
+@-webkit-keyframes bounceIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@-moz-keyframes bounceIn {
+  0% {
+    opacity: 0;
+    -moz-transform: scale(0.7);
+         transform: scale(0.7);
+  }
+  100% {
+    opacity: 1;
+    -moz-transform: scale(1);
+         transform: scale(1);
+  }
+}
+@-o-keyframes bounceIn {
+  0% {
+    opacity: 0;
+    -o-transform: scale(0.7);
+       transform: scale(0.7);
+  }
+  100% {
+    opacity: 1;
+    -o-transform: scale(1);
+       transform: scale(1);
+  }
+}
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.7);
+       -moz-transform: scale(0.7);
+         -o-transform: scale(0.7);
+            transform: scale(0.7);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+       -moz-transform: scale(1);
+         -o-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+.bounceIn {
+  -webkit-animation-duration: 0.3s;
+     -moz-animation-duration: 0.3s;
+       -o-animation-duration: 0.3s;
+          animation-duration: 0.3s;
+  -webkit-animation-fill-mode: both;
+     -moz-animation-fill-mode: both;
+       -o-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-name: bounceIn;
+     -moz-animation-name: bounceIn;
+       -o-animation-name: bounceIn;
+          animation-name: bounceIn;
+}
+
+/* 弹窗公共动画--结束*/
+/* 公共半透明遮罩--开始 */
+.com-masker {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 9999;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+@media \0screen {
+  .com-masker {
+    background-color: #000;
+    filter: Alpha(opacity=50);
+  }
+}
+
+.active-hover:active {
+  -webkit-transform: scale(1.05);
+     -moz-transform: scale(1.05);
+      -ms-transform: scale(1.05);
+       -o-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+@-webkit-keyframes heartAnimate {
+  0%, 100% {
+    -webkit-transform: scale(1) rotate(0);
+            transform: scale(1) rotate(0);
+  }
+  /*0%,100%时保持图形的原大小且不旋转*/
+  10%, 30% {
+    -webkit-transform: scale(0.9) rotate(3deg);
+            transform: scale(0.9) rotate(3deg);
+  }
+  /*10%,30%时图形缩小成0.9倍，并且顺时针旋转3度*/
+  20%, 40%, 60%, 80% {
+    -webkit-transform: scale(1.1) rotate(-3deg);
+            transform: scale(1.1) rotate(-3deg);
+  }
+  /*20%,40%,60%,80%时图形扩大成1.1倍，并且逆时针旋转3度*/
+  50%, 70% {
+    -webkit-transform: scale(1.1) rotate(3deg);
+            transform: scale(1.1) rotate(3deg);
+  }
+  /*50%,70%时图形扩大成1.1倍，并且顺时针旋转3度*/
+}
+
+@-moz-keyframes heartAnimate {
+  0%, 100% {
+    -moz-transform: scale(1) rotate(0);
+         transform: scale(1) rotate(0);
+  }
+  /*0%,100%时保持图形的原大小且不旋转*/
+  10%, 30% {
+    -moz-transform: scale(0.9) rotate(3deg);
+         transform: scale(0.9) rotate(3deg);
+  }
+  /*10%,30%时图形缩小成0.9倍，并且顺时针旋转3度*/
+  20%, 40%, 60%, 80% {
+    -moz-transform: scale(1.1) rotate(-3deg);
+         transform: scale(1.1) rotate(-3deg);
+  }
+  /*20%,40%,60%,80%时图形扩大成1.1倍，并且逆时针旋转3度*/
+  50%, 70% {
+    -moz-transform: scale(1.1) rotate(3deg);
+         transform: scale(1.1) rotate(3deg);
+  }
+  /*50%,70%时图形扩大成1.1倍，并且顺时针旋转3度*/
+}
+
+@-o-keyframes heartAnimate {
+  0%, 100% {
+    -o-transform: scale(1) rotate(0);
+       transform: scale(1) rotate(0);
+  }
+  /*0%,100%时保持图形的原大小且不旋转*/
+  10%, 30% {
+    -o-transform: scale(0.9) rotate(3deg);
+       transform: scale(0.9) rotate(3deg);
+  }
+  /*10%,30%时图形缩小成0.9倍，并且顺时针旋转3度*/
+  20%, 40%, 60%, 80% {
+    -o-transform: scale(1.1) rotate(-3deg);
+       transform: scale(1.1) rotate(-3deg);
+  }
+  /*20%,40%,60%,80%时图形扩大成1.1倍，并且逆时针旋转3度*/
+  50%, 70% {
+    -o-transform: scale(1.1) rotate(3deg);
+       transform: scale(1.1) rotate(3deg);
+  }
+  /*50%,70%时图形扩大成1.1倍，并且顺时针旋转3度*/
+}
+
+@keyframes heartAnimate {
+  0%, 100% {
+    -webkit-transform: scale(1) rotate(0);
+       -moz-transform: scale(1) rotate(0);
+         -o-transform: scale(1) rotate(0);
+            transform: scale(1) rotate(0);
+  }
+  /*0%,100%时保持图形的原大小且不旋转*/
+  10%, 30% {
+    -webkit-transform: scale(0.9) rotate(3deg);
+       -moz-transform: scale(0.9) rotate(3deg);
+         -o-transform: scale(0.9) rotate(3deg);
+            transform: scale(0.9) rotate(3deg);
+  }
+  /*10%,30%时图形缩小成0.9倍，并且顺时针旋转3度*/
+  20%, 40%, 60%, 80% {
+    -webkit-transform: scale(1.1) rotate(-3deg);
+       -moz-transform: scale(1.1) rotate(-3deg);
+         -o-transform: scale(1.1) rotate(-3deg);
+            transform: scale(1.1) rotate(-3deg);
+  }
+  /*20%,40%,60%,80%时图形扩大成1.1倍，并且逆时针旋转3度*/
+  50%, 70% {
+    -webkit-transform: scale(1.1) rotate(3deg);
+       -moz-transform: scale(1.1) rotate(3deg);
+         -o-transform: scale(1.1) rotate(3deg);
+            transform: scale(1.1) rotate(3deg);
+  }
+  /*50%,70%时图形扩大成1.1倍，并且顺时针旋转3度*/
+}
+
+.active-shake {
+  -webkit-animation: heartAnimate 0.8s ease infinite;
+     -moz-animation: heartAnimate 0.8s ease infinite;
+       -o-animation: heartAnimate 0.8s ease infinite;
+          animation: heartAnimate 0.8s ease infinite;
+}
+
+/* 公共半透明遮罩--结束 */
+.header-box {
+  height: 0.96rem;
+  width: 100%;
+  line-height: 0.96rem;
+  background-color: #fff;
+  font-size: 0;
+}
+
+.header-box dl {
+  height: 100%;
+}
+
+.header-box dt, .header-box dd {
+  height: 100%;
+}
+
+.header-box dt {
+  float: right;
+  padding-right: 0.1rem;
+}
+
+.header-box dt a.login {
+  float: right;
+  height: 100%;
+  font-size: 0.26rem;
+  color: #000;
+}
+
+.header-box dt .select-major {
+  padding: 0 0.21rem 0 0.21rem;
+}
+
+.header-box dt .select-school {
+  padding: 0 0.28rem 0 0.21rem;
+}
+
+.header-box dt .login {
+  font-size: 0;
+}
+
+.header-box dt .login em {
+  display: inline-block;
+  width: 0.9rem;
+  line-height: normal;
+  padding: 0.03rem 0;
+  -webkit-border-radius: 0.36rem;
+     -moz-border-radius: 0.36rem;
+          border-radius: 0.36rem;
+  text-align: center;
+  background-color: #ff9a09;
+  font-size: 0.26rem;
+  color: #fff;
+}
+
+.header-box dt p {
+  position: relative;
+  float: left;
+  height: 100%;
+  font-size: 0.26rem;
+  color: #000;
+}
+
+.header-box dt p i {
+  display: block;
+}
+
+.header-box dt p span {
+  display: none;
+  position: absolute;
+  top: 0.96rem;
+  width: 100%;
+  text-align: center;
+  z-index: 100;
+  background-color: #fff;
+  -webkit-border-radius: 0 0 0.1rem 0.1rem;
+     -moz-border-radius: 0 0 0.1rem 0.1rem;
+          border-radius: 0 0 0.1rem 0.1rem;
+}
+
+.header-box dt p em {
+  display: block;
+}
+
+.header-box dt p a {
+  display: block;
+  color: #000;
+}
+
+.header-box dd {
+  float: left;
+  font-size: 0;
+}
+
+.header-box dd i, .header-box dd a {
+  vertical-align: middle;
+}
+
+.header-box dd i {
+  display: inline-block;
+  margin-bottom: 0.03rem;
+  height: 0.28rem;
+  width: 0.32rem;
+  margin-right: 0.06rem;
+  background: url("../assets/img/tel.png") no-repeat center center/100% 100%;
+}
+
+.header-box dd .main {
+  display: inline-block;
+  margin: 0 0.2rem 0 0.15rem;
+}
+
+.header-box dd .main img {
+  display: inline-block;
+  width: 2rem;
+  height: 0.5rem;
+  vertical-align: middle;
+}
+
+.header-box dd a.tel {
+  display: inline-block;
+  width: 1.97rem;
+  height: 0.36rem;
+  line-height: 0.36rem;
+  font-size: 0.24rem;
+  color: #fff;
+  text-align: center;
+  background: url("../assets/img/phoneBd.png") no-repeat center/100%;
+}
+
+.login-container {
+  display: none;
+}
+
+.login-box {
+  width: 5.22rem;
+  padding: 0.54rem 0.3rem 0.3rem 0.3rem;
+  min-height: 2.68rem;
+  background-color: #fff;
+  position: fixed;
+  z-index: 9999;
+  top: 50%;
+  left: 50%;
+  margin-left: -2.95rem;
+  margin-top: -2.72rem;
+  -webkit-border-radius: 0.16rem;
+     -moz-border-radius: 0.16rem;
+          border-radius: 0.16rem;
+  border: 0.06rem solid #ffdc4f;
+}
+
+.login-box .close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 0.5rem;
+  padding: 0.1rem 0.2rem;
+}
+
+.login-box .msg {
+  font-size: 0.24rem;
+  color: #ff5e30;
+  min-width: 3.2rem;
+  margin-left: 1.8rem;
+  line-height: 0.4rem;
+}
+
+.login-box input {
+  border: 0.02rem solid #c2c2c2;
+  height: 0.56rem;
+  -webkit-border-radius: 0.08rem;
+     -moz-border-radius: 0.08rem;
+          border-radius: 0.08rem;
+  font-size: 0.24rem;
+}
+
+.login-box .btn {
+  font-size: 0.26rem;
+  width: 1.4rem;
+  height: 0.7rem;
+  line-height: 0.7rem;
+  text-align: center;
+  background-color: #ff5e30;
+  -webkit-border-radius: 0.14rem;
+     -moz-border-radius: 0.14rem;
+          border-radius: 0.14rem;
+  margin: 0.2rem auto;
+  color: #fff;
+}
+
+.login-box div:first-of-type span {
+  text-indent: 0.24rem;
+}
+
+.login-box div {
+  font-size: 0rem;
+  margin-bottom: 0.2rem;
+}
+
+.login-box div span {
+  font-size: 0.24rem;
+  display: inline-block;
+  min-width: 1.44rem;
+}
+
+.login-box div input {
+  width: 3.66rem;
+  text-indent: 0.04rem;
+}
+
+.login-box div .valid, .login-box div button {
+  width: 1.4rem;
+  height: 0.56rem;
+  vertical-align: bottom;
+  margin-left: 0.08rem;
+}
+
+.login-box div button {
+  border: none;
+  -webkit-border-radius: 0.08rem;
+     -moz-border-radius: 0.08rem;
+          border-radius: 0.08rem;
+  background-color: #cdcdcd;
+  font-size: 0.2rem;
+}
+
+.login-box div:nth-of-type(1) {
+  margin-top: 0.28rem;
+}
+
+.login-box div:nth-of-type(2) input, .login-box div:nth-of-type(3) input {
+  width: 2.12rem;
+}
+
+.login-box div:nth-of-type(3) {
+  margin-bottom: 0;
+}
+
+.login-box .login-msg {
+  margin-top: 0.1rem;
+  font-size: 0.24rem;
+  min-height: 0.4rem;
+  text-align: center;
+  color: #db0000;
+}
+
+.login-box .btn {
+  font-size: 0.32rem;
+  width: 2rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
