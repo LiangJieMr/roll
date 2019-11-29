@@ -1,0 +1,66 @@
+.school{
+	width: 100%;
+	height: auto;
+	background: #fff;
+	padding-top: 0.4rem;
+	.school_inner{
+		width: 90%;
+		height: auto;
+		margin: 0 auto;
+		.school_inner_tit{
+			width: 4.79rem;
+			height: 0.49rem;
+			margin: 0 auto;
+			background: url(../../assets191212/img/schooltitbg.png) no-repeat;
+			background-size: 100%;
+		}
+		.school_inner_intro{
+			text-align: center;
+			color: #e73c0e;
+			font-size: 0.18rem;
+			line-height: 0.3rem;
+		}
+	}
+	.school_edu{
+		width: 93%;
+		margin: 0.22rem auto 0;
+		overflow: hidden;
+		li{
+			display: none;
+			float: left;
+			width: 2.08rem;
+			height: 1.31rem;
+			margin: 0 0.12rem 0.17rem;
+			background: #f8f8f8;
+			padding: 0.12rem 0 0.07rem 0;
+			a{
+				.school_logo{
+					width: 0.99rem;
+					height: 0.99rem;
+					margin: 0 auto;
+					img{
+						width: 100%;
+						height: 100%;
+					}
+				}
+				p{
+					font-size: 0.22rem;
+					text-align: center;
+					font-weight: 700;
+					margin-top: 0.01rem;
+				}
+			}
+		}
+	}
+	.school_btn{
+		width: 1.4rem;
+		height: 0.40rem;
+		font-size: 0.26rem;
+		margin: 0 auto;
+		text-align: center;
+		line-height: 0.40rem;
+		background: #f76300;
+		color: #fff;
+		margin-top: 0.1rem;
+	}
+}

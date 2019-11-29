@@ -1,0 +1,48 @@
+.introduce{
+	width: 100%;
+	height: auto;
+	background: #fff;
+	margin-top: 0.53rem;
+	.introduce_inner{
+		width: 6.4rem;
+		height: auto;
+		margin: 0 auto;
+		.introduce_inner_tit{
+			width: 6.2rem;
+			height: 0.45rem;
+			margin: 0 auto 0.31rem auto;
+			background: url(../../assets191212/img/dream.png) no-repeat;
+			background-size: 100%;
+		}
+		ul{
+			width: 100%;
+			overflow: hidden;
+			li{
+				width: 50%;
+				height: 2.65rem;
+				margin-bottom: 0.38rem;
+				float: left;
+				text-align: center;
+				div{
+					width: 1.54rem;
+					height: 1.54rem;
+					margin: 0 auto;
+					img{
+						width: 100%;
+						height: 100%;
+					}
+				}
+				.introduce_in{
+					font-size: 0.26rem;
+					font-weight: 700;
+					color: #000;
+					line-height: 0.52rem;
+				}
+				p{
+					color: #808080;
+					font-size: 0.2rem;
+				}
+			}
+		}
+	}
+}

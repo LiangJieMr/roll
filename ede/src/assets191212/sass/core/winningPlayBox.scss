@@ -1,0 +1,77 @@
+.playbox{
+    width: 5.10rem;
+    height: 5.18rem;
+    position: fixed;
+    display: none;
+    top: 50%;
+    left: 50%;
+    z-index: 10000;
+    margin-top: -2.46rem;
+    margin-left: -3.15rem;
+    background:url(../../assets191212/img/res-g.png) no-repeat center;
+    background-size: 100% 100%;
+    padding: 0 0.6rem 0 0.7rem;
+    padding-top: 0.52rem;
+    .res-c {
+        width: 0.66rem;
+        height: 0.61rem;
+        position: absolute;
+        right: 0.4rem;
+        top: 0rem;
+        background:url(../../assets191212/img/res-c.png) no-repeat center;
+        background-size: 100% 100%;
+    }
+    h4 {
+        font-size: 0.36rem;
+        color: #fff;
+        text-align: center;
+    }
+    p:first-of-type {
+        margin-top: 0.4rem;
+    }
+    p {
+        font-size: 0.24rem;
+        text-align: center;
+        margin-top: 0.1rem;
+        margin-bottom: 0.2rem;
+    }
+	.txt{
+		width: 95%;
+		margin: 0 auto;
+	}
+	.prize3{
+		width: 2rem;
+		height: 1.8rem;
+		display: block;
+		margin: auto;
+	}
+    .prize2{
+    	width: 1.4rem;
+    	height: 1.8rem;
+    	display: block;
+    	margin: auto;
+    }
+	.prize1{
+		width: 1.8rem;
+		height: 1.8rem;
+		display: block;
+		margin: auto;
+	}
+	.topgrade{
+		width: 1.8rem;
+		height: 1.8rem;
+		display: block;
+		margin: auto;
+	}
+    .register {
+        background: url(../../assets191212/img/res-btn.png) no-repeat center;
+        background-size: 100%;
+        font-size: 0.24rem;
+        color: #fff;
+        width: 2.3rem;
+        height: 0.56rem;
+        margin: 0.05rem auto 0 auto;
+        line-height: 0.48rem;
+        text-align: center;
+    }
+}

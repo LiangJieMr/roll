@@ -1,0 +1,108 @@
+.header-box{
+    height: 0.96rem;
+    width: 100%;
+    line-height: 0.96rem;
+    background-color: #fff;
+    font-size: 0;
+    dl{
+        height: 100%;
+    }
+    dt,dd{
+        height: 100%;
+    }
+    dt{
+        float: right;
+        padding-right: 0.1rem;
+        a.login{
+            float: right;
+            height: 100%;
+            font-size: 0.26rem;
+            color: #000;
+        }
+        
+        .select-major{
+            padding: 0 0.21rem 0 0.21rem;
+        }
+        .select-school{
+            padding: 0 0.28rem 0 0.21rem;
+        }
+        .login{
+            font-size: 0;
+            em{
+                display: inline-block;
+                width: 0.9rem;
+                line-height: normal;
+                padding: 0.03rem 0;
+                border-radius: 0.36rem;
+                text-align: center;
+                background-color:#ff9a09;
+                font-size: 0.26rem;
+                color: #fff;
+            }
+        }
+        p{
+            position: relative;
+            float: left;
+            height: 100%;
+            font-size: 0.26rem;
+            color: #000;
+            i{
+                display: block;
+            }
+            span{
+                display: none;
+                position: absolute;
+                top: 0.96rem;
+                width: 100%;
+                text-align: center;
+                z-index: 100;
+                background-color: #fff;
+                border-radius: 0 0 0.1rem 0.1rem;
+            }
+            em{
+                display: block;
+            }
+            a{
+                display: block;
+                color: #000;
+            }
+        }
+    }
+    dd{
+        float: left;
+        font-size:0;
+        i,a{
+            vertical-align: middle;
+        }
+        i{
+            display: inline-block;
+            margin-bottom: 0.03rem;
+            height: 0.28rem;
+            width: 0.32rem;
+            margin-right: 0.06rem;
+            background:url("../../assets191212/img/tel.png") no-repeat center center/100% 100%;
+        }
+       
+        .main{
+            display: inline-block;
+            margin:0 0.2rem 0 0.15rem;
+             img{
+                display: inline-block;
+                width: 2rem;
+                height: 0.5rem;
+                vertical-align: middle;
+            }
+        }
+        a.tel{
+            display: inline-block;
+            width: 1.97rem;
+            height: 0.36rem;
+            line-height: 0.36rem;
+//          line-height: 0.38rem;
+            font-size: 0.24rem;
+            color: #fff;
+            text-align: center;
+            background:url('../../assets191212/img/phoneBd.png') no-repeat center/100%;
+        }
+    }
+}

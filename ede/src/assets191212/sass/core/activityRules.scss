@@ -1,0 +1,39 @@
+.activityRules{
+	width: 100%;
+	height: auto;
+	background: #ffad29;
+	padding: 0.5rem 0 0.4rem;
+	.activityRules_inner{
+		width: 6.57rem;
+		height: 6.27rem;
+		margin: 0 auto;
+		border: 0.05rem solid #ffde2a;
+		border-radius: 0.1rem;
+		background: #fff;
+		padding: 0.45rem 0.2rem 0.38rem;
+		position: relative;
+		.activityRules_inner_nav{
+			width: 1.81rem;
+			height: 0.42rem;
+			background: url(../../assets191212/img/navbg.png) no-repeat;
+			background-size: 100%;
+			font-size: 0.25rem;
+			line-height: 0.42rem;
+			text-align: center;
+			color: #fffdc5;
+			font-weight: 700;
+			position: absolute;
+			top: -0.18rem;
+		}
+		p{
+			font-size: 0.22rem;
+			color: #353535;
+			line-height: 0.36rem;
+			letter-spacing: 0.001rem;
+		}
+		p:last-child{
+			margin-top: 0.36rem;
+		}
+	}
+	
+}

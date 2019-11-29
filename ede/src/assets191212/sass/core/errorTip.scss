@@ -1,0 +1,37 @@
+ .error-close {
+     position: fixed;
+	 width: 2.5rem;
+     z-index: 10001;
+     bottom: 8%;
+     left: 50%;
+	 margin-left: -1.43rem;
+     display: none;
+     padding: 0.16rem 0.18rem 0.18rem 0.18rem;
+     text-align: center;
+     color: #fff;
+     font-size: 0.2rem;
+     background: #fff6e6;
+     border-radius: 0.04rem;
+     max-width: 6rem;
+     height: 0.35rem;
+	 line-height: 0.35rem;
+     white-space: nowrap;
+     background-color: rgb(60, 27, 147);
+     border-radius: 0.05rem;
+     box-shadow: 0rem 0rem 0.1rem 0.04rem rgba(68,95,228,.5);
+     text-overflow: ellipsis;
+     overflow: hidden;
+     .iconfont {
+         font-size: 0.3rem;
+         position: relative;
+         color: #fe9b00;
+         left: 0rem;
+         top: 0rem;
+         padding-right: 0.1rem;
+         vertical-align: middle;
+     }
+     span{
+         vertical-align: middle;
+		 font-size: 0.2rem;
+     }
+ }

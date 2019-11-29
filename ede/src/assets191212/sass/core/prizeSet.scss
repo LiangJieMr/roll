@@ -1,0 +1,137 @@
+.prizeset{
+	width: 100%;
+	height: auto;
+	display: block;
+	background: #ffad29;
+	padding: 0.5rem 0 0.2rem;
+	.prizeset_inner{
+		width: 6.63rem;
+		height: 6.34rem;
+		margin: 0 auto;
+		border: 0.05rem solid #ffde2a;
+		border-radius: 0.1rem;
+		background: #fff;
+		padding: 0 0.17rem 0;
+		position: relative;
+		.prizeset_inner_nav{
+			width: 1.81rem;
+			height: 0.42rem;
+			background: url(../../assets191212/img/navbg.png) no-repeat;
+			background-size: 100%;
+			font-size: 0.25rem;
+			line-height: 0.42rem;
+			text-align: center;
+			color: #fffdc5;
+			font-weight: 700;
+			position: absolute;
+			top: -0.18rem;
+			left: 0.2rem;
+		}
+		.prizeset_notice{
+			padding-top: 0.2rem;
+			color: #686868;
+			font-size: 0.18rem;
+			text-align: right;
+			margin-bottom: 0.2rem;
+			span{
+				color: #ffad29;
+			}
+		}
+		.prizeset_top{
+			width: 100%;
+			height: 2.62rem;
+			overflow: hidden;
+			.prizeset_top_img{
+				width: 2.25rem;
+				height: 2.14rem;
+				margin: 0 auto;
+				img{
+					width: 100%;
+					height: 100%;
+				}
+			}
+			.prizeset_top_int{
+				height: 0.3rem;
+				font-size: 0.26rem;
+				margin-top: 0.1rem;
+				text-align: center;
+				span{
+					display: inline-block;
+					font-size: 0.18rem;
+					padding: 0.02rem 0.06rem;
+					margin-right: 0.1rem;
+					letter-spacing: 0.01rem;
+					color: #fff;
+					border-radius: 0.05rem;
+					vertical-align: middle;
+					background: #f14360;
+				}
+				b{
+					vertical-align: middle;
+				}
+			}
+		}
+		ul{
+			width: 100%;
+			height: auto;
+			margin-top: 0.48rem;
+			overflow: hidden;
+			li{
+				width: 1.6rem;
+				height: 2.24rem;
+				margin: 0 0.2rem;
+				float: left;
+				.prize1{
+					width: 1.22rem;
+					height: 1.2rem;
+					margin: 0 auto;
+					img{
+						height: 100%;
+					}
+				}
+				.prize2{
+					width: 0.9rem;
+					height: 1.2rem;
+					margin: 0 auto;
+					img{
+						height: 100%;
+					}
+				}
+				.prizeset_top_int{
+					height: 0.3rem;
+					font-size: 0.26rem;
+					margin: 0.1rem 0 0.12rem 0;
+					text-align: center;
+					span{
+						display: inline-block;
+						font-size: 0.18rem;
+						padding: 0.02rem 0.06rem;
+						margin-right: 0.1rem;
+						letter-spacing: 0.01rem;
+						color: #fff;
+						border-radius: 0.05rem;
+						vertical-align: middle;
+						background: #f14360;
+					}
+					b{
+						vertical-align: middle;
+					}
+				}
+				p{
+					font-size: 0.18rem;
+					text-align: center;
+					color: #1b1b1b;
+				}
+			}
+			li.prize2li{
+				width: 1.8rem;
+			}
+			li.prize3{
+				width: 2.4rem;
+				height: 2.24rem;
+				margin: 0;
+			}
+		}
+	}
+	
+}

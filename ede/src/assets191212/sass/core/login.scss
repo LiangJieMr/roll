@@ -1,0 +1,125 @@
+.login-container{
+    display: none;
+}
+.login-box {
+//  display: none;
+    width: 5.22rem;
+    padding: 0.54rem 0.3rem 0.3rem 0.3rem;
+    min-height: 2.68rem;
+    background-color: #fff;
+    position: fixed;
+    z-index: 9999;
+    top: 50%;
+    left: 50%;
+    margin-left: -2.95rem;
+    margin-top: -2.72rem;
+    border-radius: 0.16rem;
+    border: 0.06rem solid #ff5e30;
+    .close {
+        position: absolute;
+        top:0;
+        right: 0;
+        font-size: 0.5rem;
+        padding: 0.1rem 0.2rem;
+    }
+    .msg {
+        font-size: 0.24rem;
+        color: #ff5e30;
+        min-width: 3.2rem;
+        margin-left: 1.8rem;
+        line-height: 0.4rem;
+    }
+    input {
+        border: 0.02rem solid #c2c2c2;
+        height: 0.56rem;
+        border-radius: 0.08rem;
+        font-size: 0.24rem;
+    }
+    .btn {
+        font-size: 0.26rem;
+        width: 1.4rem;
+        height: 0.7rem;
+        line-height: 0.7rem;
+        text-align: center;
+        background-color: #ff5e30;
+        border-radius: 0.14rem;
+        margin: 0.2rem auto;
+        color: #fff;
+    }
+    div:first-of-type{
+        span {
+            text-indent: 0.24rem;
+        }
+    }
+    div {
+        font-size: 0rem;
+        margin-bottom: 0.2rem;
+        span {
+            font-size: 0.24rem;
+            display: inline-block;
+            min-width: 1.44rem;
+        }
+        input {
+            width: 3.66rem;
+            text-indent: 0.04rem;
+        }
+        .valid, button {
+            width: 1.4rem;
+            height: 0.56rem;
+            vertical-align: bottom;
+            margin-left: 0.08rem;
+        }
+        button {
+            border: none;
+            border-radius: 0.08rem;
+            background-color: #cdcdcd;
+            font-size: 0.2rem;
+        }
+    }
+    div:nth-of-type(1) {
+        margin-top: 0.28rem;
+    }
+    div:nth-of-type(2), div:nth-of-type(3) {
+        input {
+            width: 2.12rem;
+        }
+    }
+    div:nth-of-type(3) {
+      margin-bottom: 0;   
+    }
+    .check{
+		margin-top: .35rem;
+		text-align: center;
+	    font-size: .22rem;
+	    color: #767676;
+	    white-space: nowrap;
+		label{
+			vertical-align: middle;
+			input{
+			    height: .28rem;
+			    width: .28rem;
+			    vertical-align: middle;
+			}
+			i{
+				font-style: normal;
+			    vertical-align: middle;
+			}
+			a{
+			    font-style: normal;
+			    vertical-align: middle;
+			    color: #ff5e30;
+			}
+		}
+	}
+	.login-msg {
+        margin-top: 0.1rem;
+        font-size: 0.24rem;
+        min-height: 0.4rem;
+        text-align: center;
+        color: #db0000;
+    }
+    .btn {
+        font-size: 0.32rem;
+        width: 2rem;
+    }
+}

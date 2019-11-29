@@ -1,0 +1,124 @@
+@import './core/reset.scss';
+@import './core/header.scss';
+@import './core/banner.scss';
+@import './core/myPrize.scss';
+@import './core/prizeSet.scss';
+@import './core/activityRules.scss';
+@import './core/school.scss';
+@import './core/introduce.scss';
+@import './core/winners.scss';
+@import './core/login.scss';
+@import './core/footer.scss';
+@import './core/address.scss';
+@import './core/winningPlayBox.scss';
+@import './core/warmTip.scss';
+@import './core/errorTip.scss';
+body{
+	width: 7.5rem;
+	margin: 0 auto;
+}
+.myyellow{
+	background: #ffad29;
+}
+.mask{
+	display: none;
+	position: fixed;
+	left: 0;
+    top: 0;
+    z-index: 9999;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+#demo{
+   overflow:hidden;
+   height:100%;
+   float: left;
+   width: 2.64rem;
+   position:relative;
+}
+#demo1{
+   height:auto;
+   text-align:center;
+}
+#demo2{
+   height:auto;
+   text-align:center;
+}
+#demo1 li{
+   font-size: 0.2rem;
+   list-style-type:none;
+   line-height: 0.28rem;
+   text-align: center;
+}
+#demo2 li{
+   list-style-type:none;
+   line-height: 0.28rem;
+   text-align:center;
+   font-size: 0.2rem;
+}
+#dem{
+    overflow:hidden;
+    height:100%;
+	float: right;
+    width: 2.64rem;
+    position:relative;
+}
+#dem1{
+    height:auto;
+    text-align:center;
+}
+#dem2{
+    height:auto;
+    text-align:center;
+}
+#dem1 li{
+  	font-size: 0.2rem;
+	line-height: 0.28rem;
+    list-style-type:none;
+    text-align:center;
+}
+#dem2 li{
+    list-style-type:none;
+    text-align:center;
+	line-height: 0.28rem;
+    font-size: 0.2rem;
+}
+.success, .form-first{
+    width: 5.12rem;
+    padding: 0.54rem 0.3rem 0.3rem 0.3rem;
+    min-height: 2.68rem;
+    background-color: #fff;
+    position: fixed;
+    z-index: 10000;
+    top: 50%;
+    left: 50%;
+    margin-left: -2.89rem;
+    margin-top: -2.5rem;
+    border-radius: 0.16rem;
+    border: 0.04rem solid #ff5e30;
+	.btn {
+		font-size: 0.26rem;
+		width: 1.4rem;
+		height: 0.7rem;
+		line-break: 0.7rem;
+		text-align: center;
+		background-color: #ff5e30;
+		-webkit-border-radius: 0.14rem;
+		-moz-border-radius: 0.14rem;
+		border-radius: 0.14rem;
+		line-height: 0.7rem;
+		margin: 0.2rem auto;
+		color: #fff;
+	}
+    .msg {
+        font-size: 0.24rem;
+        color: #ff5e30;
+        min-width: 3.2rem;
+        margin-left: 1.8rem;
+        line-height: 0.4rem;
+    }
+}
+.success{
+	 min-height: 2.1rem;
+}
