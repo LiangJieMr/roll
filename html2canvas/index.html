@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>html2canvas</title>
+    <style>
+        body {
+            position: relative;
+            width: 375px;
+            overflow-x: hidden;
+        }
+
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .test {
+            border: 1px solid #ccc;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        img {
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .newImg {
+            width: 200px;
+        }
+
+        canvas {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: 0 auto;
+            transform: scale(0);
+        }
+        .Screenshots {
+            background: rgba(0, 100, 12, .7);
+            color: #fff;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div class="test">
+    <h1>hello world!</h1>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+    </ul>
+    <img src="./logo.png" alt="">
+</div>
+<canvas class="canvas"></canvas>
+<span class="Screenshots">截屏</span>
+<a class="a">下载</a>
+</body>
+</html>
+<script src="https://cdn.bootcss.com/html2canvas/0.5.0-beta4/html2canvas.js"></script>
+<script src="./index.js"></script>
+
