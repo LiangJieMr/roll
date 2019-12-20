@@ -36,16 +36,6 @@
             width: 200px;
         }
 
-        canvas {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            margin: auto;
-            transform: scale(0);
-        }
 
         .Screenshots {
             background: rgba(0, 100, 12, .7);
@@ -64,6 +54,8 @@
     </style>
 </head>
 <body>
+<span class="Screenshots">截屏</span>
+<a class="a">下载</a>
 <div class="test">
     <h1>hello world!</h1>
     <ul>
@@ -116,11 +108,24 @@
         <li>9</li>
     </ul>
 </div>
-<span class="Screenshots">截屏</span>
-<a class="a">下载</a>
+<canvas class="canvas"></canvas>
+
 </body>
 </html>
-<script src="https://cdn.bootcss.com/html2canvas/0.5.0-beta4/html2canvas.js"></script>
-<!--<script src="html2canvas.min.js"></script>-->
-<script src="./index.js"></script>
+<script src="jquery-3.3.1.js"></script>
+<!--<script src="https://cdn.bootcss.com/html2canvas/0.5.0-beta4/html2canvas.js"></script>-->
+<script src="html2canvas.min.js"></script>
+<script>
+    var test = $(".test1").get(0);
+    $('.Screenshots').on('click',function () {
+        html2canvas(test).then(function(canvas) {
+            // canvas宽度
+            var canvasWidth = canvas.width;
+            // canvas高度
+            var canvasHeight = canvas.height;
+            $('.Screenshots').after(canvas);
+        })
+
+    });
+</script>
 

@@ -46,7 +46,8 @@ canvas2.style.transition = "transform 0.3s cubic-bezier(0.42, 0, 0.58, 1) 0s, op
 function takeScreenshot(){
     html2canvas(document.querySelector('.test1'),{
         canvas: canvas2,
-        background: 'red'
+        background: 'red',
+        allowTaint: false
     }).then(function (canvas) {
         canvas2.style.display="inline-block";
         var i = 0;
@@ -63,7 +64,7 @@ function takeScreenshot(){
     })
 }
 
-// 图片
+// 图片  可另存为
  /*html2canvas(document.querySelector('.test'),{ canvas: canvas2 }).then(function (canvas) {
      let image = new Image();
      image.className = "newImg";
@@ -73,7 +74,6 @@ function takeScreenshot(){
     a.download = name | 'html2canvas';
     a.setAttribute("href", canvas.toDataURL("image/png"));
     document.body.appendChild(image)
-    // document.querySelector('.app').appendChild(canvas)
 });*/
 
 /*html2canvas(canvasObj, {
@@ -82,7 +82,7 @@ function takeScreenshot(){
         window.location.href = url;
     }
 });*/
-// 文件名称有误
+// 文件名称有误Li
 /*
 html2canvas(document.querySelector('.test1'), {
     onrendered: function(canvas) {
